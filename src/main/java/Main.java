@@ -36,10 +36,10 @@ public class Main {
             if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_ESCAPE) == GLFW.GLFW_PRESS)
                 GLFW.glfwSetWindowShouldClose(window, true);
 
-            /* if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_SPACE) == GLFW.GLFW_PRESS) {
-                r += Math.random() / Math.random();
-                g += Math.random() / Math.random();
-                b += Math.random() / Math.random();
+            if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_SPACE) == GLFW.GLFW_PRESS) {
+                r += Math.random() * 0.1;
+                g += Math.random() * 0.1;
+                b += Math.random() * 0.1;
                 if (r > 50) r -= 50;
                 if (g > 50) g -= 50;
                 if (b > 50) b -= 50;
@@ -51,7 +51,7 @@ public class Main {
                 GLFW.glfwSwapBuffers(window);
                 GL33.glClearColor(r % 1, g % 1, b % 1, 1f);
                 GL33.glClear(GL33.GL_COLOR_BUFFER_BIT);
-            } */
+            }
             GL33.glClearColor(0f, 0f, 0f, 1f);
             GL33.glClear(GL33.GL_COLOR_BUFFER_BIT);
             Game.render(window);
